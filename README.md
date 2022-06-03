@@ -24,9 +24,9 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-Repo_name:
+Repo_name:https://github.com/ijayhub/note-app
 
-Hosted link:
+Hosted link:https://note-web-app.netlify.app
 
 <h1 align="center">Note Web App</h1>
 
