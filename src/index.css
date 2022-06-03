@@ -1,3 +1,9 @@
+
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +13,102 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.container{
+  max-width: 960px;
+  margin:0 auto;
+  padding: 0 15px;
+
 }
+.note{
+  background-color: rgb(225, 0, 255);
+  border-radius: 10px;
+  padding:20px;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
+  height:20vh;
+  overflow-y:hidden;
+  white-space:pre-wrap;
+  margin-top:30px;
+}
+.note-footer{
+  display: flex;
+  align-items: center;
+  justify-content:space-between; 
+}
+
+.note-list{
+  display:-ms-grid;
+  display:grid;
+  gap:10px;
+  -ms-grid-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
+.note.new{
+  background-color:skyblue;
+}
+textarea{
+  border:none;
+  resize:none;
+  background-color:skyblue;
+}
+textarea:focus{
+  outline:none;
+
+}
+.save{
+  border:none;
+  padding:5px 10px;
+  border-radius:15px;
+  background-color:gainsboro;
+}
+.save:hover{
+  background-color:rgb(225, 0, 255);
+  color:white;
+  cursor: pointer;
+}
+.delete-icon{
+  cursor: pointer;
+}
+
+.toggle-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background-color:pink;
+  padding:20px;
+}
+.btn{
+  border:none;
+  padding:5px 10px;
+  border-radius:15px;
+  background-color:red;
+  color:white;
+  outline:none;
+}
+.btn:hover{
+  background-color:gainsboro;
+  color:black;
+  cursor: pointer;
+}
+.title{
+  font-size:40px;
+  font-style: italic;
+}
+
+.dark-mode{
+  background-color:black;
+  transition:all 0.5s ease-in-out;
+  height:100vh;
+}
+@media only screen and (max-width:600px){
+  .title{
+    font-size: 24px;
+  }
+  .btn{
+    padding:5px;
+  }
+}
+
