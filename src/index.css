@@ -110,5 +110,8 @@ textarea:focus{
   .btn{
     padding:5px;
   }
+  .note .new{
+    padding:0;
+  }
 }
 
