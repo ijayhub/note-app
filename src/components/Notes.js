@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
+
 
 import { data } from '../components/data';
 import NoteList from './NoteList';
 import { nanoid } from 'nanoid';
-// import TitleToggle from './TitleToggle';
+import useLocalStorage from '../hooks/useLocalStorage';
+
 
 
 
 const Notes = () => {
-    const [notes, setNotes] = useState(data)
-    // const[searchText, setSearchText] = useState('')
+    const [notes, setNotes] = useLocalStorage('notes',data)
+
+    
    
     const handleDeleteNote = (id) => {
         const newNote = notes.filter((note) => note.id !== id)
